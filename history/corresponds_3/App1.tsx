@@ -1,3 +1,4 @@
+/*
 import ListGroup from "./components/ListGroup";
 
 function App() {
@@ -19,3 +20,4 @@ function App() {
 }
 
 export default App;
+*/
