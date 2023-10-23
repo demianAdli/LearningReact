@@ -1,21 +1,13 @@
-import Alert from "./components/Alert";
-import Button from "./components/Button/Button.tsx";
-import { useState } from "react";
+import Like from "./components/Like";
 
 function App() {
-  const [alertVisible, setAlertVisibility] = useState(false);
   return (
     <div>
-      {alertVisible && (
-        <Alert onClose={() => setAlertVisibility(false)}>My alert</Alert>
-      )}
-      <Button color="primary" onClick={() => setAlertVisibility(true)}>
-        My Button
-      </Button>
+      <Like onClick={() => console.log("clicked")} />
     </div>
   );
 }
 
 export default App;
 
-/* This file corresponds to the commit 4-9 */
+/* This file corresponds to the commit 4-10 */
