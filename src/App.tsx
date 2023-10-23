@@ -1,14 +1,21 @@
-import ListGroup from "./components/ListGroup";
-import { BsFillCalendarFill } from "react-icons/bs";
+import Alert from "./components/Alert";
+import Button from "./components/Button/Button.tsx";
+import { useState } from "react";
 
 function App() {
+  const [alertVisible, setAlertVisibility] = useState(false);
   return (
     <div>
-      <BsFillCalendarFill color="red" size="40" />
+      {alertVisible && (
+        <Alert onClose={() => setAlertVisibility(false)}>My alert</Alert>
+      )}
+      <Button color="primary" onClick={() => setAlertVisibility(true)}>
+        My Button
+      </Button>
     </div>
   );
 }
 
 export default App;
 
-/* This file corresponds to the commit 4-8 2 */
+/* This file corresponds to the commit 4-9 */
