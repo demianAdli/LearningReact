@@ -1,9 +1,22 @@
-import Like from "./components/Like";
+import { useState } from "react";
+import Button from "./components/Button/Button.tsx";
 
 function App() {
+  const [game, setGame] = useState({
+    id: 1,
+    player: {
+      name: "John",
+    },
+  });
+
+  const handleClick = () => {
+    setGame({ ...game, player: { ...game.player, name: "Ali" } });
+  };
   return (
     <div>
-      <Like onClick={() => console.log("clicked")} />
+      <Button color="primary" onClick={() => setGame(handleClick)}>
+        My Button
+      </Button>
     </div>
   );
 }
