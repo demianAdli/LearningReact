@@ -14,7 +14,8 @@ function App() {
   };
   return (
     <div>
-      <Button color="primary" onClick={() => setGame(handleClick)}>
+      {game.player.name}
+      <Button color="primary" onClick={handleClick}>
         My Button
       </Button>
     </div>
