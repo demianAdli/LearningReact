@@ -1,34 +1,25 @@
 import { useState } from "react";
-import Button from "./components/Button/Button.tsx";
+import ExpandableText from "./components/ExpandableText.tsx";
 
 function App() {
-  const [cart, setCart] = useState({
-    discount: 0.1,
-    items: [
-      { id: 1, title: "Product 1", quantity: 1 },
-      { id: 2, title: "Product 2", quantity: 1 },
-    ],
-  });
-
-  const handleClick = () => {
-    setCart({
-      ...cart,
-      items: cart.items.map((item) =>
-        item.id === 1 ? { ...item, quantity: item.quantity + 1 } : item
-      ),
-    });
-  };
   return (
     <div>
-      {cart.items[0].quantity}
-      <br />
-      <Button color="primary" onClick={handleClick}>
-        My Button
-      </Button>
+      <ExpandableText>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+        accusamus ex dicta veniam consequatur modi sit nisi corrupti non dolorum
+        excepturi, consectetur laudantium neque exercitationem, ad a corporis!
+        Nemo temporibus veniam, exercitationem excepturi reprehenderit modi
+        impedit nam consequatur eius molestiae velit quos sunt molestias dicta.
+        Veritatis voluptas modi officiis accusantium quaerat error, nulla, quae
+        ab, commodi ad voluptate eveniet voluptates rerum quidem saepe minima
+        repellat quam. Doloremque, magnam adipisci dolor laborum quia, numquam
+        voluptates id culpa accusamus voluptatem dolores excepturi dicta facilis
+        ratione autem aspernatur ducimus ullam! Reiciendis dolorum doloribus
+        laborum cumque nulla quibusdam, deleniti eum, beatae et voluptate
+        tempora!
+      </ExpandableText>
     </div>
   );
 }
 
 export default App;
-
-/* This file corresponds to the commit 4-10 */
